@@ -1,0 +1,12 @@
+dependencies {
+
+    testCompile project(":eventuate-tram-examples-common")
+
+    testCompile "io.eventuate.tram.core:eventuate-tram-spring-reactive-jdbc-kafka:$eventuateTramVersion"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+}
+
+test {
+    forkEvery 1
+}
