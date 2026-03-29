@@ -4,7 +4,7 @@ import io.eventuate.tram.commands.common.ReplyMessageHeaders;
 import io.eventuate.tram.consumer.common.reactive.ReactiveMessageConsumer;
 import io.eventuate.tram.messaging.common.Message;
 import io.eventuate.tram.reactive.commands.producer.ReactiveCommandProducer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import reactor.core.publisher.Mono;
 
@@ -13,8 +13,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public abstract class AbstractReactiveTramCommandTest {
 
@@ -40,7 +40,7 @@ public abstract class AbstractReactiveTramCommandTest {
 
   private void assertReplyReceived(String commandId) throws InterruptedException {
     Message m = queue.poll(10, TimeUnit.SECONDS);
-    assertNotNull("Expected reply by deadline", m);
+    assertNotNull(m, "Expected reply by deadline");
     assertEquals(commandId, m.getRequiredHeader(ReplyMessageHeaders.IN_REPLY_TO));
   }
 

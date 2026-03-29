@@ -1,9 +1,12 @@
+bootJar.enabled = false
+jar.enabled = true
+
 dependencies {
-    compile "io.eventuate.tram.core:eventuate-tram-spring-reactive-commands:$eventuateTramVersion"
-    compile "io.eventuate.tram.core:eventuate-tram-spring-reactive-events:$eventuateTramVersion"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-reactive-commands:$eventuateTramVersion"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-reactive-events:$eventuateTramVersion"
 
-    compile "org.springframework.boot:spring-boot-starter:$springBootVersion"
+    implementation "org.springframework.boot:spring-boot-starter:$springBootVersion"
 
-    compile "junit:junit:4.12"
+    implementation "org.junit.jupiter:junit-jupiter-api"
 
 }

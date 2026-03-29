@@ -1,10 +1,10 @@
 dependencies {
 
-    testCompile project(":eventuate-tram-examples-common")
+    testImplementation project(":eventuate-tram-examples-common")
 
-    testCompile "io.eventuate.tram.core:eventuate-tram-spring-reactive-jdbc-kafka:$eventuateTramVersion"
+    testImplementation "io.eventuate.tram.core:eventuate-tram-spring-reactive-jdbc-kafka:$eventuateTramVersion"
 
-    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
 }
 
 test {

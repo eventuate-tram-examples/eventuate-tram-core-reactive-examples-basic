@@ -3,14 +3,14 @@ package io.eventuate.tram.reactive.examples.basic.events;
 import io.eventuate.tram.events.common.DomainEvent;
 import io.eventuate.tram.reactive.examples.basic.events.domain.AccountDebited;
 import io.eventuate.tram.spring.events.publisher.ReactiveDomainEventPublisher;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public abstract class AbstractReactiveTramEventTest {
 
