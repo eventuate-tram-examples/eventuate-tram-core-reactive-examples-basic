@@ -5,7 +5,7 @@ dependencies {
     implementation "io.eventuate.tram.core:eventuate-tram-spring-reactive-commands:$eventuateTramVersion"
     implementation "io.eventuate.tram.core:eventuate-tram-spring-reactive-events:$eventuateTramVersion"
 
-    implementation "org.springframework.boot:spring-boot-starter:$springBootVersion"
+    implementation "org.springframework.boot:spring-boot-starter"
 
     implementation "org.junit.jupiter:junit-jupiter-api"
 
